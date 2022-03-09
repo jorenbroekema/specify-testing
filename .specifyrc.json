@@ -1,0 +1,27 @@
+{
+  "repository": "jorenbroekema/specify-testing",
+  "head": "specify",
+  "rules": [
+    {
+      "name": "Design Tokens / Colors",
+      "path": "tokens/colors.json",
+      "filter":{
+        "types": ["color"]
+      },
+      "parsers": [
+        {
+          "name": "to-style-dictionary",
+          "options": {
+            "keys": ["name"],
+            "formatName": "camelCase",
+            "formatConfig": {
+              "endOfLine": "lf",
+              "tabWidth": 2,
+              "useTabs": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
