@@ -4,22 +4,19 @@
   "rules": [
     {
       "name": "Design Tokens / Colors",
-      "path": "tokens/colors.json",
+      "path": "tokens/colors.css",
       "filter":{
         "types": ["color"]
       },
       "parsers": [
         {
-          "name": "to-style-dictionary",
+          "name": "sort-by",
           "options": {
-            "keys": ["name"],
-            "formatName": "camelCase",
-            "formatConfig": {
-              "endOfLine": "lf",
-              "tabWidth": 2,
-              "useTabs": false
-            }
+            "keys": ["name"]
           }
+        },
+        {
+          "name": "to-css-custom-properties"
         }
       ]
     }
